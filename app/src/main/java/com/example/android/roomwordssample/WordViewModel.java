@@ -17,6 +17,8 @@ package com.example.android.roomwordssample;
  */
 
 import android.app.Application;
+import android.widget.Toast;
+
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
@@ -48,5 +50,10 @@ public class WordViewModel extends AndroidViewModel {
 
     void insert(Word word) {
         mRepository.insert(word);
+    }
+
+    void deleteAll() {
+        mRepository.deleteAll();
+        Toast.makeText(getApplication(), "All words have been deleted", Toast.LENGTH_LONG).show();
     }
 }

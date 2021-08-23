@@ -19,6 +19,7 @@ package com.example.android.roomwordssample;
 import android.app.Application;
 import androidx.lifecycle.LiveData;
 
+
 import java.util.List;
 
 /**
@@ -52,6 +53,12 @@ class WordRepository {
     void insert(Word word) {
         WordRoomDatabase.databaseWriteExecutor.execute(() -> {
             mWordDao.insert(word);
+        });
+    }
+
+    void deleteAll(){
+        WordRoomDatabase.databaseWriteExecutor.execute(() -> {
+            mWordDao.deleteAll();
         });
     }
 }
