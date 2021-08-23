@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.view.recycler;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -22,6 +22,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
+import com.example.android.roomwordssample.data.Word;
+
 
 public class WordListAdapter extends ListAdapter<Word, WordViewHolder> {
 
@@ -40,7 +42,7 @@ public class WordListAdapter extends ListAdapter<Word, WordViewHolder> {
         holder.bind(current.getWord());
     }
 
-    static class WordDiff extends DiffUtil.ItemCallback<Word> {
+    public static class WordDiff extends DiffUtil.ItemCallback<Word> {
 
         @Override
         public boolean areItemsTheSame(@NonNull Word oldItem, @NonNull Word newItem) {

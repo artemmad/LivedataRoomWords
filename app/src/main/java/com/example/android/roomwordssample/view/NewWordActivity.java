@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.view;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -23,6 +23,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.android.roomwordssample.R;
 
 /**
  * Activity for entering a word.

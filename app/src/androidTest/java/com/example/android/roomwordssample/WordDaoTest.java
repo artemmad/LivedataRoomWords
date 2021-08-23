@@ -34,6 +34,8 @@ import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.example.android.roomwordssample.data.Word;
+import com.example.android.roomwordssample.data.WordDao;
 import com.example.android.roomwordssample.data.WordRoomDatabase;
 
 /**
@@ -60,7 +62,7 @@ public class WordDaoTest {
                 // Allowing main thread queries, just for testing.
                 .allowMainThreadQueries()
                 .build();
-        mWordDao = mDb.wordDao();
+        mWordDao = mDb.getWordDao();
     }
 
     @After

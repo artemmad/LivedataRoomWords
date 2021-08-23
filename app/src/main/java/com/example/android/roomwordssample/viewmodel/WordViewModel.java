@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.viewmodel;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -22,6 +22,9 @@ import android.widget.Toast;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.example.android.roomwordssample.repository.WordRepository;
+import com.example.android.roomwordssample.data.Word;
+
 import java.util.List;
 
 /**
@@ -44,15 +47,15 @@ public class WordViewModel extends AndroidViewModel {
         mAllWords = mRepository.getAllWords();
     }
 
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
-    void insert(Word word) {
+    public void insert(Word word) {
         mRepository.insert(word);
     }
 
-    void deleteAll() {
+    public void deleteAll() {
         mRepository.deleteAll();
         Toast.makeText(getApplication(), "All words have been deleted", Toast.LENGTH_LONG).show();
     }

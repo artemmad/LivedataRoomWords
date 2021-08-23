@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.repository;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -20,6 +20,10 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 
 
+import com.example.android.roomwordssample.data.Word;
+import com.example.android.roomwordssample.data.WordDao;
+import com.example.android.roomwordssample.data.WordRoomDatabase;
+
 import java.util.List;
 
 /**
@@ -27,7 +31,7 @@ import java.util.List;
  * https://developer.android.com/topic/libraries/architecture/guide.html
  */
 
-class WordRepository {
+public class WordRepository {
 
     private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
@@ -36,27 +40,27 @@ class WordRepository {
     // dependency. This adds complexity and much more code, and this sample is not about testing.
     // See the BasicSample in the android-architecture-components repository at
     // https://github.com/googlesamples
-    WordRepository(Application application) {
+    public WordRepository(Application application) {
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
-        mWordDao = db.wordDao();
+        mWordDao = db.getWordDao();
         mAllWords = mWordDao.getAlphabetizedWords();
     }
 
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
     // You must call this on a non-UI thread or your app will throw an exception. Room ensures
     // that you're not doing any long running operations on the main thread, blocking the UI.
-    void insert(Word word) {
+    public void insert(Word word) {
         WordRoomDatabase.databaseWriteExecutor.execute(() -> {
             mWordDao.insert(word);
         });
     }
 
-    void deleteAll(){
+    public void deleteAll(){
         WordRoomDatabase.databaseWriteExecutor.execute(() -> {
             mWordDao.deleteAll();
         });

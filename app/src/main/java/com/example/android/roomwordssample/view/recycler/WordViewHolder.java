@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.view.recycler;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +22,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.roomwordssample.R;
 
 class WordViewHolder extends RecyclerView.ViewHolder {
     private final TextView wordItemView;

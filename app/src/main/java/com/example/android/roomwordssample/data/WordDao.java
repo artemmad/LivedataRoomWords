@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package com.example.android.roomwordssample.data;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -22,6 +22,8 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
+import com.example.android.roomwordssample.data.Word;
+
 import java.util.List;
 
 /**
@@ -41,11 +43,11 @@ public interface WordDao {
     // data has changed. Since we are getting all the contents of the database,
     // we are notified whenever any of the database contents have changed.
     @Query("SELECT * FROM word_table ORDER BY word ASC")
-    LiveData<List<Word>> getAlphabetizedWords();
+    public LiveData<List<Word>> getAlphabetizedWords();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Word word);
+    public void insert(Word word);
 
     @Query("DELETE FROM word_table")
-    void deleteAll();
+    public void deleteAll();
 }
