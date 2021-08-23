@@ -34,9 +34,9 @@ import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.example.android.roomwordssample.data.Word;
-import com.example.android.roomwordssample.data.WordDao;
-import com.example.android.roomwordssample.data.WordRoomDatabase;
+import com.example.android.roomwordssample.data.room.Word;
+import com.example.android.roomwordssample.data.room.WordDao;
+import com.example.android.roomwordssample.data.room.WordRoomDatabase;
 
 /**
  * This is not meant to be a full set of tests. For simplicity, most of your samples do not

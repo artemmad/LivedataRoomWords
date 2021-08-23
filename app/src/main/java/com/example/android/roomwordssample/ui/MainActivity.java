@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.view;
+package com.example.android.roomwordssample.ui;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -27,9 +27,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.roomwordssample.R;
-import com.example.android.roomwordssample.view.recycler.WordListAdapter;
-import com.example.android.roomwordssample.data.Word;
-import com.example.android.roomwordssample.viewmodel.WordViewModel;
+import com.example.android.roomwordssample.ui.recycler.WordListAdapter;
+import com.example.android.roomwordssample.data.room.Word;
+import com.example.android.roomwordssample.domain.WordViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 

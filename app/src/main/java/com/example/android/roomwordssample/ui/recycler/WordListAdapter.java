@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.view.recycler;
+package com.example.android.roomwordssample.ui.recycler;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -22,7 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
-import com.example.android.roomwordssample.data.Word;
+import com.example.android.roomwordssample.data.room.Word;
 
 
 public class WordListAdapter extends ListAdapter<Word, WordViewHolder> {

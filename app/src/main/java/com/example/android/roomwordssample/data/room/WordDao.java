@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.data;
+package com.example.android.roomwordssample.data.room;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -21,8 +21,6 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-
-import com.example.android.roomwordssample.data.Word;
 
 import java.util.List;
 

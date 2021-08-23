@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.view;
+package com.example.android.roomwordssample.ui;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -20,7 +20,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 

@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.viewmodel;
+package com.example.android.roomwordssample.domain;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -22,8 +22,8 @@ import android.widget.Toast;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.android.roomwordssample.repository.WordRepository;
-import com.example.android.roomwordssample.data.Word;
+import com.example.android.roomwordssample.data.repository.WordRepository;
+import com.example.android.roomwordssample.data.room.Word;
 
 import java.util.List;
 

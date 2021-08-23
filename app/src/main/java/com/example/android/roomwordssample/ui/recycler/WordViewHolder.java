@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordssample.view.recycler;
+package com.example.android.roomwordssample.ui.recycler;
 
 import android.view.LayoutInflater;
 import android.view.View;

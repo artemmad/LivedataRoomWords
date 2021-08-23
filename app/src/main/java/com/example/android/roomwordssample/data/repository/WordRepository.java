@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample.repository;
+package com.example.android.roomwordssample.data.repository;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -20,9 +20,9 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 
 
-import com.example.android.roomwordssample.data.Word;
-import com.example.android.roomwordssample.data.WordDao;
-import com.example.android.roomwordssample.data.WordRoomDatabase;
+import com.example.android.roomwordssample.data.room.Word;
+import com.example.android.roomwordssample.data.room.WordDao;
+import com.example.android.roomwordssample.data.room.WordRoomDatabase;
 
 import java.util.List;
 
